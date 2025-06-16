@@ -1,0 +1,290 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #f9f9f9;
+}
+
+.container {
+  padding: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  max-width: max-content;
+  margin-left: 20%;
+  padding: 15px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.nav-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: grey;
+  font-weight: 500;
+  margin-left: 50px;
+}
+
+.create-job-btn {
+  background-color: #5d5fef;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 50px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: white;
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.search-input,
+.dropdown {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  min-width: 200px;
+}
+
+.salary-range {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.range-label {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .job-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.job-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  transition: transform 0.2s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.badge {
+  background-color: #d9d9ff;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+}
+
+.job-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.job-info {
+  font-size: 0.95rem;
+  margin: 4px 0;
+  color: #444;
+}
+
+.job-desc {
+  padding-left: 20px;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.apply-btn {
+  margin-top: 1rem;
+  width: 100%;
+  background-color: #5d5fef;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal {
+  font-family: "Inter", sans-serif;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  left: 22%;
+  background-color: #fff;
+  padding: 32px;
+  max-width: 800px;
+  margin: 40px auto;
+  border-radius: 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.job-header {
+  width: 100%;
+}
+
+.modal-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.job-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-row {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+input,
+select,
+textarea {
+  padding: 12px 19px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid black;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+  width: 100%;
+}
+
+textarea.form-control,
+.form-actions {
+  width: 100%;
+}
+
+.salary-range-fields {
+  display: inline;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.salary-range-fields input {
+  width: 42%
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.draft-btn,
+.publish-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.draft-btn {
+  background-color: white;
+  border: 1px solid #333;
+  color: #333;
+}
+
+.publish-btn {
+  background-color: #0099ff;
+  color: white;
+}
+
+span.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 4px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    flex: 1 1 100%;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
